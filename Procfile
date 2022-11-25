@@ -1,1 +1,1 @@
-web: gunicorn streamro.wsgi --log-file -
+web: gunicorn streamro.wsgi
