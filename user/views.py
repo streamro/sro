@@ -43,7 +43,7 @@ def login_user(request):
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         if user is not None:
-            auth.login(request,user)
+            login(request,user)
             messages.success(request, "You are now logged in")
             return redirect("home")
         else:

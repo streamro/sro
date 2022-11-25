@@ -3,7 +3,6 @@
 {% block title %} StreamRo{% endblock %}
 
 {% block content %}
-{% if user.is_authenticated %}
 <!-- Slider Start -->
 <section id="home" class="iq-main-slider p-0">
     <div id="home-slider" class="slider m-0 p-0">
@@ -167,8 +166,7 @@
                                        </div>
                                        <div class="block-social-info">
                                           <ul class="list-inline p-0 m-0 music-play-lists">
-                                          <a href="{% url 'my_list' movies.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
-                                          <a href="{% url 'my_list' movies.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                          
                                           </ul>
                                        </div>
                                     </div>
@@ -208,8 +206,7 @@
                                              </div>
                                              <div class="block-social-info">
                                                 <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <a href="{% url 'my_list' comedy.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
-                                                <a href="{% url 'my_list' comedy.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                             
                                                 </ul>
                                              </div>
                                           </div>
@@ -256,8 +253,7 @@
                                        </div>
                                        <div class="block-social-info">
                                           <ul class="list-inline p-0 m-0 music-play-lists">
-                                          <a href="{% url 'my_list' buster.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
-                                          <a href="{% url 'my_list' buster.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                         
                                           </ul>
                                        </div>
                                     </div>
@@ -297,8 +293,7 @@
                                        </div>
                                        <div class="block-social-info">
                                           <ul class="list-inline p-0 m-0 music-play-lists">
-                                          <a href="{% url 'my_list' dramas.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
-                                          <a href="{% url 'my_list' dramas.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                         
                                           </ul>
                                        </div>
                                     </div>
@@ -339,8 +334,7 @@
                                        </div>
                                        <div class="block-social-info">
                                           <ul class="list-inline p-0 m-0 music-play-lists">
-                                          <a href="{% url 'my_list' dramas.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
-                                          <a href="{% url 'my_list' dramas.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                        
                                           </ul>
                                        </div>
                                     </div>
@@ -361,29 +355,4 @@
     <a class="top" href="#top" id="top"> <i class="fa fa-angle-up"></i> </a>
 </div>
 <!-- back-to-top End -->
-{% else %}
-<section class="sign-in-page">
-   <div class="container">
-      <div class="row justify-content-center align-items-center height-self-center">
-         <div class="col-lg-5 col-md-12 align-self-center">
-            <div class="sign-user_card ">            
-               <div class="sign-in-page-data">
-                  <div class="sign-in-from w-100 m-auto">
-                     <h1 class="mb-3 text-center">Unlimited films, TV</h1>
-                     <h2 class="mb-3 text-center">programmes and more.</h2>
-                  </div>
-               </div>
-               <div class="mt-3">
-                  <div class="d-flex justify-content-center links">
-                     Don't have an account? <a href="{% url 'register' %}" class="text-primary ml-2">Sign Up</a>
-                  </div>
-                  <div class="d-flex justify-content-center links">
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-{% endif %}
 {% endblock %}
