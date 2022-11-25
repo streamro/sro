@@ -1,0 +1,50 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+  <!-- MainContent -->
+  <section class="m-profile manage-p">
+    <div class="container h-100">
+        <div class="row align-items-center justify-content-center h-100">
+            <div class="col-lg-10">
+                <div class="sign-user_card">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="upload_profile d-inline-block">
+                            <img src="{% static 'images/user/user.jpg' %}" class="profile-pic rounded-circle img-fluid" alt="user">
+                                <input class="file-upload" type="file" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="col-lg-10 device-margin">
+                            <div class="profile-from">
+                                <h4 class="mb-3">Manage Profile</h4>
+                                    
+                                <form method="POST" action="">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label>Update First Name:</label>
+                                        {{u_update.first_name}}
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Update Last Name:</label>
+                                        {{u_update.last_name}}
+                                    </div>
+                                    
+                                    </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <button type="submit" class="btn btn-hover">Save</button>
+                                        
+                                        <a href="{% url 'home' %}" class="btn btn-link">Cancel</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MainContent End-->
+{% endblock%}

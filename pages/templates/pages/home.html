@@ -1,0 +1,389 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block title %} StreamRo{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<!-- Slider Start -->
+<section id="home" class="iq-main-slider p-0">
+    <div id="home-slider" class="slider m-0 p-0">
+    <div class="slide slick-bg s-bg-1">
+        <div class="container-fluid position-relative h-100">
+            <div class="slider-inner h-100">
+                <div class="row align-items-center  h-100">
+                <div class="col-xl-6 col-lg-12 col-md-12">
+                    <a href="javascript:void(0);">
+                        <div class="channel-logo" data-animation-in="fadeInLeft" data-delay-in="0.5">
+                            <img src="{% static "images/logo.png" %}" class="c-logo" alt="streamit">
+                        </div>
+                    </a>
+                    <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
+                        data-delay-in="0.6">Dune</h1>
+                    <div class="d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">
+                        <span class="badge badge-secondary p-2">16+</span>
+                        <span class="ml-3"></span>
+                        <span></span>
+                    </div>
+                    <p data-animation-in="fadeInUp" data-delay-in="1.2">Călătoria mitică și emoționantă din „Dune” spune povestea lui Paul Atreides, un tânăr strălucit și talentat, născut într-un mare destin, dincolo de înțelegerea sa, care trebuie să meargă pe cea mai periculoasă planetă din univers pentru a asigura viitorul familiei și poporului său. </p>
+                    <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp" data-delay-in="1.2">
+                        <a href="{% url 'listing' 1 %}" class="btn btn-hover"><i class="fa fa-play mr-2"
+                            aria-hidden="true"></i>Play Now</a>
+                    </div>
+                </div>
+                </div>
+                <div class="trailor-video">
+                <a href="https://www.youtube.com/watch?v=n9xhJrPXop4" class="video-open playbtn">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="80px" height="80px" viewBox="0 0 213.7 213.7"
+                        enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+                        <polygon class='triangle' fill="none" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10"
+                            points="73.5,62.5 148.5,105.8 73.5,149.1 " />
+                        <circle class='circle' fill="none" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
+                    </svg>
+                    <span class="w-trailor">Watch Trailer</span>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide slick-bg s-bg-2">
+        <div class="container-fluid position-relative h-100">
+            <div class="slider-inner h-100">
+                <div class="row align-items-center  h-100">
+                <div class="col-xl-6 col-lg-12 col-md-12">
+                    <a href="javascript:void(0);">
+                        <div class="channel-logo" data-animation-in="fadeInLeft">
+                            <img src="{% static "images/logo.png" %}" class="c-logo" alt="streamit">
+                        </div>
+                    </a>
+                    <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft">inglourious basterds</h1>
+                    <div class="d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="0.5">
+                        <span class="badge badge-secondary p-2">16+</span>
+                        <span class="ml-3">2h 40m</span>
+                    </div>
+                    <p data-animation-in="fadeInUp" data-delay-in="0.7">Ticăloși fără glorie este un film americano-german din 2009 scris și regizat de Quentin Tarantino. Este produs de Lawrence Bender. Rolurile principale au fost interpretate de actorii Brad Pitt, Diane Kruger si Christoph Waltz.
+
+                    </p>
+                    <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp" data-delay-in="1">
+                        <a href="{% url 'listing' 4 %}" class="btn btn-hover"><i class="fa fa-play mr-2"
+                            aria-hidden="true"></i>Play Now</a>
+                    </div>
+                </div>
+                </div>
+                <div class="trailor-video">
+                <a href="https://www.youtube.com/watch?v=sE8hc4gVyGo" class="video-open playbtn">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="80px" height="80px" viewBox="0 0 213.7 213.7"
+                        enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+                        <polygon class='triangle' fill="none" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10"
+                            points="73.5,62.5 148.5,105.8 73.5,149.1 " />
+                        <circle class='circle' fill="none" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
+                    </svg>
+                    <span class="w-trailor">Watch Trailer</span>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide slick-bg s-bg-3">
+        <div class="container-fluid position-relative h-100">
+            <div class="slider-inner h-100">
+                <div class="row align-items-center  h-100">
+                <div class="col-xl-6 col-lg-12 col-md-12">
+                    <a href="javascript:void(0);">
+                        <div class="channel-logo" data-animation-in="fadeInLeft">
+                            <img src="{% static "images/logo.png" %}" class="c-logo" alt="streamit">
+                        </div>
+                    </a>
+                    <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft">Top Gun: Maverick </h1>
+                    <div class="d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="0.5">
+                        <span class="badge badge-secondary p-2">16+</span>
+                        <span class="ml-3">2h 10m</span>
+                    </div>
+                    <p data-animation-in="fadeInUp" data-delay-in="0.7">După mai mult de 30 de ani în armată ca unul din cei mai buni aviatori, Pete Mitchell se întoarce acolo unde a început, dar cu misiunea de a-și pune în slujba celor nou recrutați abilitățile sale extraordinare de pilot de teste.</p>
+                    <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp" data-delay-in="1">
+                        <a href="{% url 'listing' 46 %}" class="btn btn-hover"><i class="fa fa-play mr-2"
+                            aria-hidden="true"></i>Play Now</a>
+                    </div>
+                </div>
+                </div>
+                <div class="trailor-video">
+                <a href="https://www.youtube.com/watch?v=giXco2jaZ_4" class="video-open playbtn">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="80px" height="80px" viewBox="0 0 213.7 213.7"
+                        enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+                        <polygon class='triangle' fill="none" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10"
+                            points="73.5,62.5 148.5,105.8 73.5,149.1 " />
+                        <circle class='circle' fill="none" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
+                    </svg>
+                    <span class="w-trailor">Watch Trailer</span>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle"
+        fill="none" stroke="currentColor">
+        <circle r="20" cy="22" cx="22" id="test"></circle>
+    </symbol>
+    </svg>
+</section>
+<!-- Slider End -->
+        <!-- MainContent -->
+        <div class="main-content">
+            <section id="iq-favorites">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-sm-12 overflow-hidden">
+                        <div class="iq-main-header d-flex align-items-center justify-content-between">
+                           <h4 class="main-title"><a href="{% url 'action-adventure' %}">Action & Adventure </a></h4>                      
+                        </div>
+                        <div class="favorites-contens">
+                           <ul class="favorites-slider list-inline  row p-0 mb-0">
+                            {% for movies in movie %}  
+                            <li class="slide-item">
+                                 <a href="{% url 'listing' movies.pk %}">
+                                    <div class="block-images position-relative">  
+                                       <div class="img-box">
+                                          <img src="{{movies.image.url}}" class="img-fluid" alt="">
+                                       </div>
+                                       <div class="block-description">
+                                          <h6>{{movies.title}}</h6>
+                                          <div class="movie-time d-flex align-items-center my-2">
+                                             <div class="badge badge-secondary p-1 mr-2">{{movies.age_restriction}}</div>
+                                             <span class="text-white">{{movies.duration}}m</span>
+                                          </div>
+                                          <div class="hover-buttons">
+                                             <a class="btn btn-hover" href="{% url 'listing' movies.pk %}"class="fa fa-play mr-1">Play Now</a>
+                                          </div>
+                                       </div>
+                                       <div class="block-social-info">
+                                          <ul class="list-inline p-0 m-0 music-play-lists">
+                                          <a href="{% url 'my_list' movies.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
+                                          <a href="{% url 'my_list' movies.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              {% endfor %}
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section id="iq-upcoming-movie">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-sm-12 overflow-hidden">
+                        <div class="iq-main-header d-flex align-items-center justify-content-between">                        
+                           <h4 class="main-title"><a href="{% url 'comedies' %}">Comedies</a></h4>
+                        </div>
+                        <div class="upcoming-contens">
+                           <ul class="favorites-slider list-inline row p-0 mb-0">
+                              {% for comedy in comedy_movies %}
+                              <li class="slide-item">
+                                    <div class="block-images position-relative">
+                                       <div class="img-box">
+                                          <img src="{{comedy.image.url}}" class="img-fluid" alt="">
+                                       </div>
+                                       <div class="block-description">
+                                          <h6>{{comedy.title}}</h6>
+                                          <div class="movie-time d-flex align-items-center my-2">
+                                             <div class="badge badge-secondary p-1 mr-2">{{comedy.age_restriction}}</div>
+                                             <span class="text-white">{{comedy.duration}}</span>
+                                          </div>
+                                          <div class="hover-buttons">
+                                             <a class="btn btn-hover" href="{% url 'listing' comedy.pk %}"class="fa fa-play mr-1">Play Now</a>
+                                                </div>
+                                             </div>
+                                             <div class="block-social-info">
+                                                <ul class="list-inline p-0 m-0 music-play-lists">
+                                                <a href="{% url 'my_list' comedy.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
+                                                <a href="{% url 'my_list' comedy.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                                </ul>
+                                             </div>
+                                          </div>
+                                          </a>
+                                       </li>
+                                       {% endfor %}
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           </div>
+                     </section>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            </div>
+            </section>
+            <section id="iq-suggestede" class="s-margin">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-sm-12 overflow-hidden">
+                        <div class="iq-main-header d-flex align-items-center justify-content-between">                       
+                           <h4 class="main-title"><a href="{% url 'blockbuster' %}">Blockbuster Movies</a></h4>                       
+                        </div>
+                        <div class="suggestede-contens">
+                           <ul class="list-inline favorites-slider row p-0 mb-0">
+                              {% for buster in block_buster %}
+                              <li class="slide-item">  
+                                    <div class="block-images position-relative"> 
+                                       <div class="img-box">
+                                          <img src="{{buster.image.url}}" class="img-fluid" alt="">
+                                       </div>
+                                       <div class="block-description">
+                                          <h6>{{buster.title}}</h6>
+                                          <div class="movie-time d-flex align-items-center my-2">
+                                             <div class="badge badge-secondary p-1 mr-2">{{buster.age_restriction}}</div>
+                                             <span class="text-white">{{buster.duration}}</span>
+                                          </div>
+                                          <div class="hover-buttons">
+                                             <a class="btn btn-hover" href="{% url 'listing' buster.pk %}"class="fa fa-play mr-1">Play Now</a>
+                                          </div>
+                                       </div>
+                                       <div class="block-social-info">
+                                          <ul class="list-inline p-0 m-0 music-play-lists">
+                                          <a href="{% url 'my_list' buster.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
+                                          <a href="{% url 'my_list' buster.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                             {% endfor %}
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section id="iq-tvthrillers" class="s-margin">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-sm-12 overflow-hidden">
+                        <div class="iq-main-header d-flex align-items-center justify-content-between">                        
+                           <h4 class="main-title"><a href="{% url 'drama' %}">Dramas</a></h4>                        
+                        </div>
+                        <div class="tvthrillers-contens">
+                           <ul class="favorites-slider list-inline row p-0 mb-0">
+                              {% for dramas in dramas_movies %}
+                              <li class="slide-item">
+                                    <div class="block-images position-relative">
+                                       <div class="img-box">
+                                          <img src="{{dramas.image.url}}" class="img-fluid" alt="">
+                                       </div>
+                                       <div class="block-description">
+                                          <h6>{{dramas.title}}</h6>
+                                          <div class="movie-time d-flex align-items-center my-2">
+                                             <div class="badge badge-secondary p-1 mr-2">{{dramas.age_restriction}}</div>
+                                             <span class="text-white">{{dramas.duration}}</span>
+                                          </div>
+                                          <div class="hover-buttons">
+                                             <a class="btn btn-hover" href="{% url 'listing' dramas.pk %}"class="fa fa-play mr-1">Play Now</a>
+                                          </div>
+                                       </div>
+                                       <div class="block-social-info">
+                                          <ul class="list-inline p-0 m-0 music-play-lists">
+                                          <a href="{% url 'my_list' dramas.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
+                                          <a href="{% url 'my_list' dramas.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              {% endfor %}
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <section id="iq-tvthrillers" class="s-margin">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-sm-12 overflow-hidden">
+                        <div class="iq-main-header d-flex align-items-center justify-content-between">                        
+                           <h4 class="main-title"><a href="{% url 'documentary' %}">Documentary Films</a></h4>                        
+                        </div>
+                        <div class="tvthrillers-contens">
+                           <ul class="favorites-slider list-inline row p-0 mb-0">
+                              {% for dramas in documentary %}
+                              <li class="slide-item">
+                                    <div class="block-images position-relative">
+                                       <div class="img-box">
+                                          <img src="{{dramas.image.url}}" class="img-fluid" alt="">
+                                       </div>
+                                       <div class="block-description">
+                                          <h6>{{dramas.title}}</h6>
+                                          <div class="movie-time d-flex align-items-center my-2">
+                                             <div class="badge badge-secondary p-1 mr-2">{{dramas.age_restriction}}</div>
+                                             <span class="text-white">{{dramas.duration}}</span>
+                                          </div>
+                                          <div class="hover-buttons">
+                                             <a class="btn btn-hover" href="{% url 'listing' dramas.pk %}"class="fa fa-play mr-1">Play Now</a>
+                                          </div>
+                                       </div>
+                                       <div class="block-social-info">
+                                          <ul class="list-inline p-0 m-0 music-play-lists">
+                                          <a href="{% url 'my_list' dramas.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
+                                          <a href="{% url 'my_list' dramas.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              {% endfor %}
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>
+         <!-- MainContent End-->
+<!-- back-to-top -->
+<div id="back-to-top">
+    <a class="top" href="#top" id="top"> <i class="fa fa-angle-up"></i> </a>
+</div>
+<!-- back-to-top End -->
+{% else %}
+<section class="sign-in-page">
+   <div class="container">
+      <div class="row justify-content-center align-items-center height-self-center">
+         <div class="col-lg-5 col-md-12 align-self-center">
+            <div class="sign-user_card ">            
+               <div class="sign-in-page-data">
+                  <div class="sign-in-from w-100 m-auto">
+                     <h1 class="mb-3 text-center">Unlimited films, TV</h1>
+                     <h2 class="mb-3 text-center">programmes and more.</h2>
+                  </div>
+               </div>
+               <div class="mt-3">
+                  <div class="d-flex justify-content-center links">
+                     Don't have an account? <a href="{% url 'register' %}" class="text-primary ml-2">Sign Up</a>
+                  </div>
+                  <div class="d-flex justify-content-center links">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% endif %}
+{% endblock %}

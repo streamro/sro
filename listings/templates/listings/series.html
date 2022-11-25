@@ -1,0 +1,178 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block title %} TV Shows {% endblock%}
+{% block content %}
+ <!-- Slider Start -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ <section class="iq-main-slider p-0">  
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-sm-12 overflow-hidden">
+            <div class="iq-main-header d-flex align-items-center justify-content-between">
+               <h1 class="main-title">TV Shows</h1>
+            </div>
+            <div class="favorites-contens">
+                <p bold >These days, the small screen has some very big things to offer. From 
+                <br> sitcoms to dramas to travel and talk shows, these are all the best
+               <br>programs on TV.</p>
+               <ul class="favorites-slider list-inline  row p-0 mb-0">
+                
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+          
+ </section>
+ <!-- Slider End -->
+ <!-- MainContent -->
+ <div class="main-content">
+   <section id="iq-favorites">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-12 overflow-hidden">
+               <div class="iq-main-header d-flex align-items-center justify-content-between">
+               </div>
+               <ul class="favorites-slider list-inline  row p-0 mb-0">
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="iq-upcoming-movie">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-12 overflow-hidden">
+               <div class="iq-main-header d-flex align-items-center justify-content-between">
+                  <h4 class="main-title">	Best Of International Shows</h4>
+               </div>
+               <div class="upcoming-contens">
+                  <ul class="favorites-slider list-inline row p-0 mb-0">
+                    {% for show in best_of_international %} 
+                    <li class="slide-item"> 
+                           <div class="block-images position-relative">
+                              <div class="img-box">
+                                 <img src="{{show.image.url}}" class="img-fluid" alt="">
+                              </div>
+                              <div class="block-description">
+                                 <h6>{{show.title}}</h6>
+                                 <div class="movie-time d-flex align-items-center my-2">
+                                    <div class="badge badge-secondary p-1 mr-2">{{show.age_restriction}}</div>
+                                    <span class="text-white">{{show.duration}}</span>
+                                 </div>
+                                 <div class="hover-buttons">
+                                   <a class="btn btn-hover" href="{% url 'single-show' show.pk %}"class="fa fa-play mr-1">Play Now</a> 
+                                 </div>
+                              </div>
+                              <div class="block-social-info">
+                                <ul class="list-inline p-0 m-0 music-play-lists">
+                                   <a href="{% url 'my_list' show.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
+                                   <a href="{% url 'my_list' show.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                </ul>
+                              </div>
+                           </div>
+                        </a>
+                     </li>
+                     {% endfor %}
+                     
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="iq-suggestede">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-12 overflow-hidden">
+               <div class="iq-main-header d-flex align-items-center justify-content-between">
+                  <h4 class="main-title">Popular Shows</h4>
+               </div>
+               <div class="suggestede-contens">
+                  <ul class="list-inline favorites-slider row p-0 mb-0">
+                     {% for show in popular_show %} 
+                    <li class="slide-item">
+                           <div class="block-images position-relative">
+                              <div class="img-box">
+                                 <img src="{{show.image.url}}" class="img-fluid" alt="">
+                              </div>
+                              <div class="block-description">
+                                 <h6>{{show.title}}</h6>
+                                 <div class="movie-time d-flex align-items-center my-2">
+                                    <div class="badge badge-secondary p-1 mr-2">{{show.age_restriction}}</div>
+                                    <span class="text-white">{{show.duration}}</span>
+                                 </div>
+                                 <div class="hover-buttons">
+                                   <a class="btn btn-hover" href="{% url 'single-show' show.pk %}"class="fa fa-play mr-1">Play Now</a>
+                                 </div>
+                              </div>
+                              <div class="block-social-info">
+                                <ul class="list-inline p-0 m-0 music-play-lists">
+                                   <a href="{% url 'my_list' show.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
+                                   <a href="{% url 'my_list' show.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                </ul>
+                              </div>
+                           </div>
+                        </a>
+                     </li>
+                    {% endfor %}
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="iq-suggestede">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-12 overflow-hidden">
+               <div class="iq-main-header d-flex align-items-center justify-content-between">
+                  <h4 class="main-title">Familiar TV Favorites</h4>
+               </div>
+               <div class="suggestede-contens">
+                  <ul class="list-inline favorites-slider row p-0 mb-0">
+                     {% for show in familiar_favorites %} 
+                    <li class="slide-item">
+                           <div class="block-images position-relative">
+                              <div class="img-box">
+                                 <img src="{{show.image.url}}" class="img-fluid" alt="">
+                              </div>
+                              <div class="block-description">
+                                 <h6>{{show.title}}</h6>
+                                 <div class="movie-time d-flex align-items-center my-2">
+                                    <div class="badge badge-secondary p-1 mr-2">{{show.age_restriction}}</div>
+                                    <span class="text-white">{{show.duration}}</span>
+                                 </div>
+                                 <div class="hover-buttons">
+                                   <a class="btn btn-hover" href="{% url 'single-show' show.pk %}"class="fa fa-play mr-1">Play Now</a>
+                                 </div>
+                              </div>
+                              <div class="block-social-info">
+                                <ul class="list-inline p-0 m-0 music-play-lists">
+                                   <a href="{% url 'my_list' show.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-heart-fill"></i></span></li></a>
+                                   <a href="{% url 'my_list' show.id %}" tabindex="-1" role="button" aria-disabled=""><li><span><i class="ri-add-line"></i></span></li></a> 
+                                </ul>
+                              </div>
+                           </div>
+                        </a>
+                     </li>
+                    {% endfor %}
+
+                    
+                     
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</div>
+
+<!-- MainContent End-->
+{% endblock %}

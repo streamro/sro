@@ -1,0 +1,19 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block title %} {{show.title}} {% endblock%}
+{% block content %}
+
+<!-- Banner Start -->
+<div class="video-container iq-main-slider">
+    <br>
+    <br>
+    <br>
+    <div class="container my-4">
+       <div class="embed-responsive embed-responsive-21by9">
+          <iframe src="{{show.video}}" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"  ></iframe>
+ 
+       </div>
+   </div>
+  </div>
+  <!-- Banner End -->
+{% endblock %}

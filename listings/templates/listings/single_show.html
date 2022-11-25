@@ -1,0 +1,244 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block title %} {{show.title}} {% endblock%}
+{% block content %}
+ <!-- Banner Start -->
+ 
+ <div class="shows-img">
+   <section id="iq-favorites">
+   <img src="{{show.main_image.url}}" class="w-100" alt="">
+   <div class="shows-content h-100">
+      <div class="row align-items-center h-100" >
+         <div class=" col-lg-7 col-md-12">
+            <br>
+            <br>
+            <br>
+            <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
+               data-delay-in="0.6">{{show.title}}</h1>
+               <div class="flex-wrap align-items-center fadeInLeft animated" data-animation-in="fadeInLeft" style="opacity: 1;">
+               <div class="slider-ratting d-flex align-items-center">
+                     <ul class="ratting-start p-0 m-0 list-inline text-primary d-flex align-items-center justify-content-left">
+                        <li>
+                           <i class="fa fa-star" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                           <i class="fa fa-star" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                           <i class="fa fa-star" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                           <i class="fa fa-star-half" aria-hidden="true"></i>
+                        </li>
+                     </ul>
+                     <span class="text-white ml-3">{{show.imdb}}</span>
+                  </div>
+                  <div class="d-flex align-items-center movie-banner-time">
+                     <span class="trending-year">{{show.duration}}</span>
+                     <span class="mx-2 mx-md-3"><i class="ri-checkbox-blank-circle-fill"></i></span>
+                     <span class="trending-year">{{show.year_show}}</span>
+                  </div>
+                  <p class="movie-banner-text" data-animation-in="fadeInUp" data-delay-in="1.2">{{show.description}}</p>
+            </div>
+            <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp" data-delay-in="1.2">
+               <a href="show-detail.html" class="btn btn-hover iq-button"><i class="fa fa-play mr-2"
+                  aria-hidden="true"></i>Last Episode</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-lg-5 col-md-12 trailor-video text-center d-none d-lg-block">
+      <a href="{{show.video_trailer}}" class="video-open playbtn">
+         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="70px" height="300px" viewBox="0 0 213.7 213.7"
+            enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+            <polygon class='triangle' fill="none" stroke-width="7" stroke-linecap="round"
+               stroke-linejoin="round" stroke-miterlimit="10"
+               points="73.5,62.5 148.5,105.8 73.5,149.1 " />
+            <circle class='circle' fill="none" stroke-width="7" stroke-linecap="round"
+               stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
+         </svg>
+         <span class="w-trailor">Watch Trailer</span>
+      </a>
+   </div>
+</section>
+</div>
+<!-- Banner End -->
+<section class="container-fluid seasons">
+   <div class="iq-custom-select d-inline-block sea-epi s-margin">
+   </div>
+   <ul class="trending-pills d-flex nav nav-pills align-items-center text-center s-margin" role="tablist">
+      <li class="nav-item">
+         <a type="button" class="nav-link active show" data-toggle="pill" href="" role="tab"
+            aria-selected="true">Season 1</a>
+      </li>
+   </ul>
+       <div class="tab-content">
+          <div id="episodes" class="tab-pane fade active show" role="tabpanel">
+             <div class="block-space">
+                <div class="row">
+                  {% for episodes in episode_s1 %}
+                   <div class="col-1-5 col-md-6 iq-mb-30">
+                      <div class="epi-box">
+                         <div class="epi-img position-relative">
+                            <img src="{{episodes.thumbnail.url}}" class="img-fluid img-zoom" alt="">
+                            <div class="episode-number">{{episodes.episode_number}}</div>  
+                            <div class="episode-play-info">
+                               <div class="episode-play">
+                                  <a href="{% url 'video-show' episodes.pk %}">
+                                     <i class="ri-play-fill"></i>
+                                  </a>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="epi-desc p-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                               <span class="text-white">Season {{episodes.season}}</span>
+                               <span class="text-primary">{{episodes.duration}}</span>
+                            </div>
+                               <h6 class="epi-name text-white mb-0">{{episodes.description}}
+                               </h6>
+                         </div>
+                      </div>
+                   </div>
+                  {% endfor %}
+
+                  <section class="container-fluid seasons">
+                     <div class="iq-custom-select d-inline-block sea-epi s-margin">
+                     </div>
+                     <ul class="trending-pills d-flex nav nav-pills align-items-center text-center s-margin" role="tablist">
+                        <li class="nav-item">
+                           <a type="button" class="nav-link active show" data-toggle="pill" href="" role="tab"
+                              aria-selected="true">Season 2</a>
+                        </li>
+                     </ul>
+                     
+ <div class="tab-content">
+          <div id="episodes" class="tab-pane fade active show" role="tabpanel">
+             <div class="block-space">
+                <div class="row">
+                  {% for episodes in episode_s2 %}
+                   <div class="col-1-5 col-md-6 iq-mb-30">
+                      <div class="epi-box">
+                         <div class="epi-img position-relative">
+                            <img src="{{episodes.thumbnail.url}}" class="img-fluid img-zoom" alt="">
+                            <div class="episode-number">{{episodes.episode_number}}</div>  
+                            <div class="episode-play-info">
+                               <div class="episode-play">
+                                  <a href="show-details.html">
+                                     <i class="ri-play-fill"></i>
+                                  </a>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="epi-desc p-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                               <span class="text-white">Season {{episodes.season}}</span>
+                               <span class="text-primary">{{episodes.duration}}</span>
+                            </div>
+                            <a href="show-details.html">
+                               <h6 class="epi-name text-white mb-0">{{episodes.description}}
+                               </h6>
+                            </a>
+                         </div>
+                      </div>
+                   </div>
+                  {% endfor %}
+
+                  <section class="container-fluid seasons">
+                     <div class="iq-custom-select d-inline-block sea-epi s-margin">
+                     </div>
+                     <ul class="trending-pills d-flex nav nav-pills align-items-center text-center s-margin" role="tablist">
+                        <li class="nav-item">
+                           <a type="button" class="nav-link active show" data-toggle="pill" href="" role="tab"
+                              aria-selected="true">Season 3</a>
+                        </li>
+                     </ul>
+                     
+ <div class="tab-content">
+          <div id="episodes" class="tab-pane fade active show" role="tabpanel">
+             <div class="block-space">
+                <div class="row">
+                  {% for episodes in episode_s3 %}
+                   <div class="col-1-5 col-md-6 iq-mb-30">
+                      <div class="epi-box">
+                         <div class="epi-img position-relative">
+                            <img src="{{episodes.thumbnail.url}}" class="img-fluid img-zoom" alt="">
+                            <div class="episode-number">{{episodes.episode_number}}</div>  
+                            <div class="episode-play-info">
+                               <div class="episode-play">
+                                  <a href="show-details.html">
+                                     <i class="ri-play-fill"></i>
+                                  </a>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="epi-desc p-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                               <span class="text-white">Season {{episodes.season}}</span>
+                               <span class="text-primary">{{episodes.duration}}</span>
+                            </div>
+                            <a href="show-details.html">
+                               <h6 class="epi-name text-white mb-0">{{episodes.description}}
+                               </h6>
+                            </a>
+                         </div>
+                      </div>
+                   </div>
+                  {% endfor %}
+
+                  
+                  <section class="container-fluid seasons">
+                     <div class="iq-custom-select d-inline-block sea-epi s-margin">
+                     </div>
+                     <ul class="trending-pills d-flex nav nav-pills align-items-center text-center s-margin" role="tablist">
+                        <li class="nav-item">
+                           <a type="button" class="nav-link active show" data-toggle="pill" href="" role="tab"
+                              aria-selected="true">Season 4</a>
+                        </li>
+                     </ul>
+                     
+ <div class="tab-content">
+          <div id="episodes" class="tab-pane fade active show" role="tabpanel">
+             <div class="block-space">
+                <div class="row">
+                  {% for episodes in episode_s4 %}
+                   <div class="col-1-5 col-md-6 iq-mb-30">
+                      <div class="epi-box">
+                         <div class="epi-img position-relative">
+                            <img src="{{episodes.thumbnail.url}}" class="img-fluid img-zoom" alt="">
+                            <div class="episode-number">{{episodes.episode_number}}</div>  
+                            <div class="episode-play-info">
+                               <div class="episode-play">
+                                  <a href="show-details.html">
+                                     <i class="ri-play-fill"></i>
+                                  </a>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="epi-desc p-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                               <span class="text-white">Season {{episodes.season}}</span>
+                               <span class="text-primary">{{episodes.duration}}</span>
+                            </div>
+                            <a href="show-details.html">
+                               <h6 class="epi-name text-white mb-0">{{episodes.description}}
+                               </h6>
+                            </a>
+                         </div>
+                      </div>
+                   </div>
+                  {% endfor %}
+
+
+                </div>
+             </div>
+          </div>
+         </div>
+          </div>
+         </div>
+        </div>
+       </div>
+    </section>
+ </div>
+ {% endblock %}
