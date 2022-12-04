@@ -3,12 +3,12 @@ from movies .models import Movie
 # Create your views here.
 
 def home(request):
-    action_movie = Movie.objects.order_by('-year_movie').filter(category ='Action & Adventure')
-    comedy_movie = Movie.objects.order_by('-year_movie').filter(category = 'Comedies')
-    block_buster = Movie.objects.order_by(('-year_movie')).filter(category = 'Blockbuster Movies')
-    top_10 = Movie.objects.order_by('-year_movie').filter(tags='Top-10')
-    drama_movies = Movie.objects.order_by('-year_movie').filter(category = 'Drama')
-    documentary_films = Movie.objects.order_by('-year_movie').filter(tags="Documentary Films")
+    action_movie = Movie.objects.order_by('-date_published').filter(category ='Action & Adventure')
+    comedy_movie = Movie.objects.order_by('-date_published').filter(category = 'Comedies')
+    block_buster = Movie.objects.order_by(('-date_published')).filter(category = 'Blockbuster Movies')
+    top_10 = Movie.objects.order_by('-date_published').filter(tags='Top-10')
+    drama_movies = Movie.objects.order_by('-date_published').filter(category = 'Drama')
+    documentary_films = Movie.objects.order_by('-date_published').filter(tags="Documentary Films")
     last_movies = Movie.objects.order_by('-date_published')[0:3]
     return render(request, 'pages/home.html',{
         'movie' : action_movie,
